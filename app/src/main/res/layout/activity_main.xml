@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.yxy.flms.MainActivity">
+    tools:context="com.yxy.flms.ui.MainActivity">
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -24,27 +24,25 @@
         android:layout_marginTop="56dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
     <EditText
-        android:id="@+id/user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:layout_alignTop="@+id/password"
-        android:layout_alignLeft="@+id/studyText"
-        android:layout_alignStart="@+id/studyText" />
-
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:ems="10"
+            android:hint="请输入用户名"/>
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
         android:inputType="numberPassword"
-        android:layout_below="@+id/logo"
-        android:layout_alignLeft="@+id/user"
-        android:layout_alignStart="@+id/user"
-        android:layout_marginTop="45dp" />
+        android:ems="10"
+        android:hint="请输入密码"
+        android:layout_below="@+id/user"
+        android:layout_alignLeft="@+id/studyText"
+        android:layout_alignStart="@+id/studyText" />
 
     <Button
         android:id="@+id/login_btn"
@@ -54,7 +52,17 @@
         android:textSize="20sp"
         android:background="#f4ea2a"
         android:layout_below="@+id/user"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="82dp" />
 
+    <TextView
+        android:id="@+id/face_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8a8a8a"
+        android:text="使用人脸识别登录"
+        android:layout_below="@+id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
 
 </RelativeLayout>
